@@ -1,0 +1,24 @@
+AllCops:
+  DisplayCopNames: true
+
+Metrics/LineLength:
+  Max: 119
+Metrics/MethodLength:
+  Enabled: true
+  CountComments: false # count full line comments?
+  Max: 10
+  Severity: refactor
+
+Style/AlignHash:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+Style/HashSyntax:
+  EnforcedStyle: ruby19
+Style/RegexpLiteral:
+  Enabled: false
+Style/PerlBackrefs:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/CollectionMethods:
+  Enabled: true
