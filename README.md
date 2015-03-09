@@ -7,7 +7,7 @@ a way to share rubocop config between projects
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rubocop-defaults'
+gem 'rubocop-defaults', git: 'ssh://git@git.example.com:7999/gem/rubocop-defaults.git', tag: 'v_current_tag'
 ```
 
 And then execute:
@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-Add the following line to your `.rubocop.yml`
+Add the following line to the top of your `.rubocop.yml`
 
 ``` yml
 require: rubocop-defaults
