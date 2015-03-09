@@ -12,16 +12,6 @@ Metrics/MethodLength:
   Max: 10
   Severity: refactor
 
-### Lint
-
-Lint/EndAlignment:
-  # The value `keyword` means that `end` should be aligned with the matching
-  # keyword (if, while, etc.).
-  # The value `variable` means that in assignments, `end` should be aligned
-  # with the start of the variable on the left hand side of `=`. In all other
-  # situations, `end` should still be aligned with the keyword.
-  AlignWith: variable
-
 ### Style
 
 Style/AlignHash:
@@ -30,22 +20,6 @@ Style/AlignHash:
 
 Style/HashSyntax:
   EnforcedStyle: ruby19
-
-Style/AlignParameters:
-  # Alignment of parameters in multi-line method calls.
-  #
-  # The `with_first_parameter` style aligns the following lines along the same
-  # column as the first parameter.
-  #
-  # method_call(a,
-  # b)
-  #
-  # The `with_fixed_indentation` style aligns the following lines with one
-  # level of indentation relative to the start of the line with the method call.
-  #
-  # method_call(a,
-  # b)
-  EnforcedStyle: with_fixed_indentation
 
 Style/MultilineOperationIndentation:
   Description: Checks indentation of binary operations that span more than one line.
