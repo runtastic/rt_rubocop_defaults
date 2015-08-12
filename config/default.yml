@@ -13,6 +13,8 @@ Metrics/MethodLength:
   Severity: refactor
 
 ### Style
+Style/ExtraSpacing:
+  Enabled: false
 
 Style/AlignHash:
   EnforcedColonStyle: table
