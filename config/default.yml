@@ -1,5 +1,6 @@
 AllCops:
   DisplayCopNames: true
+  CacheRootDirectory: '.git/rubocop_cache'
 
 ### Metrics
 
