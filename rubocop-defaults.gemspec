@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency 'rubocop', '~> 0.34.1'
-  spec.add_dependency 'rubocop-rspec', '1.3.0'
+  spec.add_dependency 'rubocop-rspec', '~> 1.3.1'
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "geminabox-release"
