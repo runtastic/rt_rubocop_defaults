@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "http://gems.example.com"
   end
 
-  spec.add_dependency 'rubocop', '~> 0.34.1'
+  spec.add_dependency 'rubocop', '~> 0.35.1'
   spec.add_dependency 'rubocop-rspec', '~> 1.3.1'
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
