@@ -1,6 +1,20 @@
 AllCops:
   DisplayCopNames: true
   CacheRootDirectory: '.git'
+  Exclude:
+    - coverage/**/*
+
+Metrics/MethodLength:
+  Exclude:
+    - api/sinatra/**/*
+
+Metrics/AbcSize:
+  Exclude:
+    - api/sinatra/**/*
+
+Lint/NestedMethodDefinition:
+  Exclude:
+    - api/sinatra/**/*
 
 ### Metrics
 
@@ -54,6 +68,16 @@ Style/NumericLiterals:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#underscores-in-numerics
   Enabled: false
 
+### Specs
+
+Metrics/ClassLength:
+  Exclude:
+    - spec/**/*
+
+Metrics/ModuleLength:
+  Exclude:
+    - spec/requests/**/*
+
 ### RSpec
 
 RSpec/ExampleWording:
@@ -62,3 +86,10 @@ RSpec/ExampleWording:
   CustomTransform:
     have: has
 
+RSpec/FilePath:
+  Exclude:
+    - spec/**/*
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/integration/**/*
