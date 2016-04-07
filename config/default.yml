@@ -4,13 +4,7 @@ AllCops:
   Exclude:
     - coverage/**/*
 
-Metrics/MethodLength:
-  Exclude:
-    - api/sinatra/**/*
-
-Metrics/AbcSize:
-  Exclude:
-    - api/sinatra/**/*
+### Lint
 
 Lint/NestedMethodDefinition:
   Exclude:
@@ -20,12 +14,20 @@ Lint/NestedMethodDefinition:
 
 Metrics/LineLength:
   Max: 119
+  Exclude:
+    - '**/Guardfile'
 
 Metrics/MethodLength:
   Enabled: true
   CountComments: false # count full line comments?
   Max: 10
   Severity: refactor
+  Exclude:
+    - api/sinatra/**/*
+
+Metrics/AbcSize:
+  Exclude:
+    - api/sinatra/**/*
 
 ### Style
 Style/ExtraSpacing:
