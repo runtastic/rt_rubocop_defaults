@@ -4,6 +4,9 @@ AllCops:
   Exclude:
     - coverage/**/*
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 ### Lint
 
 Lint/NestedMethodDefinition:
@@ -15,7 +18,8 @@ Lint/NestedMethodDefinition:
 Metrics/LineLength:
   Max: 119
   Exclude:
-    - '**/Guardfile'
+    - Guardfile
+    - Gemfile
 
 Metrics/MethodLength:
   Enabled: true
@@ -95,3 +99,6 @@ RSpec/FilePath:
 RSpec/DescribeClass:
   Exclude:
     - spec/integration/**/*
+
+RSpec/ExampleLength:
+  Enabled: false
