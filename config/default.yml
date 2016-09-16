@@ -3,6 +3,8 @@ AllCops:
   CacheRootDirectory: '.git'
   Exclude:
     - coverage/**/*
+  TargetRubyVersion: 2.3
+
 
 ### Lint
 
