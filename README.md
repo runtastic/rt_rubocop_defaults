@@ -1,5 +1,8 @@
 # Rubocop::Defaults
 
+*Version 2.x*: requires ruby >= 2.0 and loads latest rubocop, rubocop-rspec
+*Version 1.x*: locked to latest release of rubocop/rubocop-rspec which support older ruby version
+
 a way to share rubocop config between projects
 
 ## Installation
@@ -8,7 +11,7 @@ Add this line to your application's Gemfile:
 
 ```ruby
 source "http://gems.example.com" do
-  gem 'rubocop-defaults', "~> 1.6", require: false
+  gem 'rubocop-defaults', "~> 2.0", require: false
 end
 ```
 

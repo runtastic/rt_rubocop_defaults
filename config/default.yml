@@ -4,9 +4,6 @@ AllCops:
   Exclude:
     - coverage/**/*
 
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
 ### Lint
 
 Lint/NestedMethodDefinition:
