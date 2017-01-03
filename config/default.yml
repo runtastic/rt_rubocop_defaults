@@ -32,6 +32,12 @@ Metrics/AbcSize:
   Exclude:
     - api/sinatra/**/*
 
+Metrics/BlockLength:
+  Exclude:
+    - '*.gemspec'
+    - '**/*.rake'
+    - 'spec/**/*.rb'
+
 ### Style
 Style/ExtraSpacing:
   Enabled: false
