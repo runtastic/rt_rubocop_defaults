@@ -1,13 +1,16 @@
-# Rubocop::Defaults
+# Runtastic Rubocop Defaults
 
-a way to share rubocop config between projects at [runtastic](https://runtastic.com)
+opinionenated and sharable default rubocop config used at [runtastic](https://runtastic.com)
+
+Inspired by how [rubocop-rspec](https://github.com/backus/rubocop-rspec) delivers and injects it's configuration.
+
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rubocop-defaults', "~> 2.0", require: false
+gem 'rt_rubocop_defaults', "~> 1.0", require: false
 ```
 
 And then execute:
@@ -16,20 +19,44 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rubocop-defaults
+    $ gem install rt_rubocop_defaults
 
 ## Usage
 
-Add the following line to the top of your `.rubocop.yml`
+You need to tell RuboCop to load the RSpec extension. There are three ways to do this:
 
-``` yml
-require: rubocop-defaults
+### RuboCop configuration file
+
+Put this into your .rubocop.yml.
+
+```yml
+require: rt_rubocop_defaults
 ```
+
+Now you can run rubocop and it will automatically load the RuboCop RSpec cops together with the standard cops.
+
+### Command line
+
+```sh
+rubocop --require rt_rubocop_defaults
+```
+
+## Development
+
+To install this gem onto your local machine, run `bundle exec rake install`. To
+release a new version, update the version number in `version.rb`, and then run
+`bundle exec rake release`, which will create a git tag for the version, push
+git commits and tags, and push the `.gem` file
+to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 
-1. Fork it ( https://github.com/runstastic/rubocop-defaults/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+Bug reports and pull requests are welcome on GitHub at
+https://github.com/runtastic/rt_rubocop_defaults. This project is intended to be a safe,
+welcoming space for collaboration, and contributors are expected to adhere to
+the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## License
+
+The gem is available as open source under the terms of
+the [MIT License](http://opensource.org/licenses/MIT).
