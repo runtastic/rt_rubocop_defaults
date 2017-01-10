@@ -1,5 +1,2 @@
 require:
   - rubocop-defaults
-
-AllCops:
-  TargetRubyVersion: 2.3

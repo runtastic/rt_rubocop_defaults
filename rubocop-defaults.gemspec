@@ -9,14 +9,11 @@ Gem::Specification.new do |spec|
   spec.version       = Rubocop::Defaults::VERSION
   spec.authors       = ["Andreas Eger"]
   spec.email         = ["andreas.eger@runtastic.com"]
-  spec.summary       = "rubocop defaults"
-  spec.description   = "rubocop defaults"
+  spec.summary       = "rubocop defaults used at runtastic"
+  spec.description   = "rubocop defaults used at runtastic"
   spec.license       = "MIT"
-  spec.homepage      = "https://git.example.com/projects/GEM/repos/rubocop-defaults/browse"
-  spec.required_ruby_version = "~> 2.0"
-
-  raise "RubyGems 2.0 or newer is required" unless spec.respond_to?(:metadata)
-  spec.metadata["allowed_push_host"] = "http://gems.example.com"
+  spec.homepage      = "https://github.com/runtastic/rubocop-defaults"
+  spec.required_ruby_version = "~> 2.2"
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -29,5 +26,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rubocop-rspec", "1.7"
   spec.add_development_dependency "bundler", "~> 1.13"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "geminabox-release"
 end

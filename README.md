@@ -1,18 +1,13 @@
 # Rubocop::Defaults
 
-*Version 2.x*: requires ruby >= 2.0 and loads latest rubocop, rubocop-rspec
-*Version 1.x*: locked to latest release of rubocop/rubocop-rspec which support older ruby version
-
-a way to share rubocop config between projects
+a way to share rubocop config between projects at [runtastic](https://runtastic.com)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-source "http://gems.example.com" do
-  gem 'rubocop-defaults', "~> 2.0", require: false
-end
+gem 'rubocop-defaults', "~> 2.0", require: false
 ```
 
 And then execute:
@@ -33,7 +28,7 @@ require: rubocop-defaults
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/rubocop-defaults/fork )
+1. Fork it ( https://github.com/runstastic/rubocop-defaults/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
