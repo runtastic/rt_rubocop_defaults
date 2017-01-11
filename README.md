@@ -23,7 +23,7 @@ Or install it yourself as:
 
 ## Usage
 
-You need to tell RuboCop to load the RSpec extension. There are three ways to do this:
+You need to tell RuboCop to load the RSpec extension. There are two ways to do this:
 
 ### RuboCop configuration file
 
