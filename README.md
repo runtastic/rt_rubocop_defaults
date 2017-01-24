@@ -1,5 +1,7 @@
 # Runtastic Rubocop Defaults
 
+[![Gem Version](https://badge.fury.io/rb/rt_rubocop_defaults.svg)](https://badge.fury.io/rb/rt_rubocop_defaults)
+
 opinionenated and sharable default rubocop config used at [runtastic](https://runtastic.com)
 
 Inspired by how [rubocop-rspec](https://github.com/backus/rubocop-rspec) delivers and injects it's configuration.
