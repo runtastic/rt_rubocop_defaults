@@ -35,7 +35,7 @@ Metrics/AbcSize:
   Exclude:
     - api/sinatra/**/*
     
-Metrics/CyclomaticComplexity
+Metrics/CyclomaticComplexity:
   Severity: refactor
   
 Metrics/BlockLength:
