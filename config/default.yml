@@ -40,11 +40,11 @@ Metrics/CyclomaticComplexity:
   
 Metrics/BlockLength:
   Exclude:
-    - *.gemspec
-    - **/*.rake
-    - config/initialize/*
-    - spec/**/*
-    - api/**/*
+    - '*.gemspec'
+    - '**/*.rake'
+    - 'config/initialize/*'
+    - 'spec/**/*'
+    - 'api/**/*'
     
 Metrics/ClassLength:
   Exclude:
