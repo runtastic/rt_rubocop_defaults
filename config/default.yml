@@ -19,7 +19,7 @@ Metrics/LineLength:
   Exclude:
     - Guardfile
     - Gemfile
-   IgnoreCopDirectives: true
+  IgnoreCopDirectives: true
 
 Metrics/MethodLength:
   Enabled: true
