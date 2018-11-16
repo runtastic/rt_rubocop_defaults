@@ -19,6 +19,7 @@ Metrics/LineLength:
   Exclude:
     - Guardfile
     - Gemfile
+   IgnoreCopDirectives: true
 
 Metrics/MethodLength:
   Enabled: true
@@ -29,19 +30,31 @@ Metrics/MethodLength:
     - api/sinatra/**/*
 
 Metrics/AbcSize:
+  Max: 18
+  Severity: refactor
   Exclude:
     - api/sinatra/**/*
-
+    
+Metrics/CyclomaticComplexity
+  Severity: refactor
+  
 Metrics/BlockLength:
   Exclude:
-    - '*.gemspec'
-    - '**/*.rake'
-    - 'spec/**/*.rb'
+    - *.gemspec
+    - **/*.rake
+    - config/initialize/*
+    - spec/**/*
+    - api/**/*
+    
+Metrics/ClassLength:
+  Exclude:
+    - spec/**/*
 
-### Style
-Style/ExtraSpacing:
-  Enabled: false
+Metrics/ModuleLength:
+  Exclude:
+    - spec/requests/**/*
 
+### Style / Layout
 Style/AlignHash:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
@@ -86,16 +99,6 @@ Style/NumericLiterals:
   Description: Add underscores to large numeric literals to improve their readability.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#underscores-in-numerics
   Enabled: false
-
-### Specs
-
-Metrics/ClassLength:
-  Exclude:
-    - spec/**/*
-
-Metrics/ModuleLength:
-  Exclude:
-    - spec/requests/**/*
 
 ### RSpec
 
