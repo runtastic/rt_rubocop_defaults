@@ -34,10 +34,10 @@ Metrics/AbcSize:
   Severity: refactor
   Exclude:
     - api/sinatra/**/*
-    
+
 Metrics/CyclomaticComplexity:
   Severity: refactor
-  
+
 Metrics/BlockLength:
   Exclude:
     - '*.gemspec'
@@ -45,7 +45,7 @@ Metrics/BlockLength:
     - 'config/initialize/*'
     - 'spec/**/*'
     - 'api/**/*'
-    
+
 Metrics/ClassLength:
   Exclude:
     - spec/**/*
@@ -59,7 +59,7 @@ Style/AlignHash:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
 
-Layout/AlignHash:
+Layout/HashAlignment:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
 
