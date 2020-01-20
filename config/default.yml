@@ -14,6 +14,13 @@ Lint/NestedMethodDefinition:
 
 ### Metrics
 
+Layout/LineLength:
+  Max: 119
+  Exclude:
+    - Guardfile
+    - Gemfile
+  IgnoreCopDirectives: true
+
 Metrics/LineLength:
   Max: 119
   Exclude:
