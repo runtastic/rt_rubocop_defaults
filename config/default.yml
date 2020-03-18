@@ -107,11 +107,11 @@ Style/NumericLiterals:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#underscores-in-numerics
   Enabled: false
 
-Style/HashEachMethods
+Style/HashEachMethods:
   Enabled: true
-Style/HashTransformKeys
+Style/HashTransformKeys:
   Enabled: false
-Style/HashTransformValues
+Style/HashTransformValues:
   Enabled: false
 ### RSpec
 
