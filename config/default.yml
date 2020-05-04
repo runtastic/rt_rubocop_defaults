@@ -14,14 +14,35 @@ Lint/NestedMethodDefinition:
 
 ### Metrics
 
-Layout/LineLength:
+Metrics/AbcSize:
+  Max: 18
+  Severity: refactor
+  Exclude:
+    - api/sinatra/**/*
+
+Metrics/BlockLength:
+  Exclude:
+    - '*.gemspec'
+    - '**/*.rake'
+    - 'config/initialize/*'
+    - 'spec/**/*'
+    - 'api/**/*'
+
+Metrics/ClassLength:
+  Exclude:
+    - spec/**/*
+
+Metrics/CyclomaticComplexity:
+  Severity: refactor
+
+Metrics/LineLength:
   Max: 119
   Exclude:
     - Guardfile
     - Gemfile
   IgnoreCopDirectives: true
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 119
   Exclude:
     - Guardfile
@@ -36,32 +57,13 @@ Metrics/MethodLength:
   Exclude:
     - api/sinatra/**/*
 
-Metrics/AbcSize:
-  Max: 18
-  Severity: refactor
-  Exclude:
-    - api/sinatra/**/*
-
-Metrics/CyclomaticComplexity:
-  Severity: refactor
-
-Metrics/BlockLength:
-  Exclude:
-    - '*.gemspec'
-    - '**/*.rake'
-    - 'config/initialize/*'
-    - 'spec/**/*'
-    - 'api/**/*'
-
-Metrics/ClassLength:
-  Exclude:
-    - spec/**/*
-
 Metrics/ModuleLength:
   Exclude:
     - spec/requests/**/*
 
 ### Style / Layout
+
+#### Hash
 Style/AlignHash:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
@@ -73,6 +75,16 @@ Layout/HashAlignment:
 Style/HashSyntax:
   EnforcedStyle: ruby19_no_mixed_keys
 
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: false
+
+Style/HashTransformValues:
+  Enabled: false
+
+#### MultilineOperation
 Style/MultilineOperationIndentation:
   Description: Checks indentation of binary operations that span more than one line.
   EnforcedStyle: indented
@@ -81,25 +93,11 @@ Layout/MultilineOperationIndentation:
   Description: Checks indentation of binary operations that span more than one line.
   EnforcedStyle: indented
 
-Style/RaiseArgs:
-  EnforcedStyle: compact
-
-Style/SignalException:
-  EnforcedStyle: only_raise
-
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
+#### Rest
+Style/Documentation:
+  Enabled: false
 
 Style/DoubleNegation:
-  Enabled: false
-
-Style/RegexpLiteral:
-  Enabled: false
-
-Style/PerlBackrefs:
-  Enabled: false
-
-Style/Documentation:
   Enabled: false
 
 Style/NumericLiterals:
@@ -107,13 +105,29 @@ Style/NumericLiterals:
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#underscores-in-numerics
   Enabled: false
 
-Style/HashEachMethods:
-  Enabled: true
-Style/HashTransformKeys:
+Style/PerlBackrefs:
   Enabled: false
-Style/HashTransformValues:
+
+Style/RaiseArgs:
+  EnforcedStyle: compact
+
+Style/RegexpLiteral:
   Enabled: false
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
 ### RSpec
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/integration/**/*
+
+RSpec/ExampleLength:
+  Enabled: false
 
 RSpec/ExampleWording:
   IgnoredWords:
@@ -125,21 +139,14 @@ RSpec/FilePath:
   Exclude:
     - spec/**/*
 
-RSpec/DescribeClass:
-  Exclude:
-    - spec/integration/**/*
+RSpec/MessageExpectation:
+  Enabled: false
 
-RSpec/ExampleLength:
+RSpec/MultipleExpectations:
   Enabled: false
 
 RSpec/NamedSubject:
   Enabled: false
 
 RSpec/NestedGroups:
-  Enabled: false
-
-RSpec/MultipleExpectations:
-  Enabled: false
-
-RSpec/MessageExpectation:
   Enabled: false
