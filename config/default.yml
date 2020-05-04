@@ -12,6 +12,12 @@ Lint/NestedMethodDefinition:
   Exclude:
     - api/sinatra/**/*
 
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
 ### Metrics
 
 Metrics/AbcSize:
@@ -100,6 +106,9 @@ Style/Documentation:
 Style/DoubleNegation:
   Enabled: false
 
+Style/ExponentialNotation:
+  EnforcedStyle: engineering
+
 Style/NumericLiterals:
   Description: Add underscores to large numeric literals to improve their readability.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#underscores-in-numerics
@@ -116,6 +125,9 @@ Style/RegexpLiteral:
 
 Style/SignalException:
   EnforcedStyle: only_raise
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
