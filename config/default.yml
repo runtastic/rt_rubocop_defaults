@@ -24,15 +24,18 @@ Metrics/AbcSize:
   Max: 18
   Severity: refactor
   Exclude:
-    - api/sinatra/**/*
+    - 'api/sinatra/**/*'
+    - 'app/api/routes.rb'
 
 Metrics/BlockLength:
   Exclude:
     - '*.gemspec'
     - '**/*.rake'
-    - 'config/initialize/*'
-    - 'spec/**/*'
     - 'api/**/*'
+    - 'app/api/routes.rb'
+    - 'config/initialize/**/*'
+    - 'config/initializers/**/*'
+    - 'spec/**/*'
 
 Metrics/ClassLength:
   Exclude:
@@ -61,11 +64,13 @@ Metrics/MethodLength:
   Max: 10
   Severity: refactor
   Exclude:
-    - api/sinatra/**/*
+    - 'api/sinatra/**/*'
+    - 'app/api/routes.rb'
 
 Metrics/ModuleLength:
   Exclude:
-    - spec/requests/**/*
+    - 'app/api/routes.rb'
+    - 'spec/requests/**/*'
 
 ### Style / Layout
 
