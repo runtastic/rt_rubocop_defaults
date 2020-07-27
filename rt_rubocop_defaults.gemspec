@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = "rubocop defaults used at runtastic"
   spec.license       = "MIT"
   spec.homepage      = "https://github.com/runtastic/rt_rubocop_defaults"
-  spec.required_ruby_version = "~> 2.3"
+  spec.required_ruby_version = "~> 2.4"
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
@@ -22,7 +22,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "rubocop", "~> 0.81.0"
+  spec.add_dependency "rubocop", "~> 0.88"
   spec.add_development_dependency "bundler", "> 1.13", "< 3"
+  spec.add_development_dependency "mry"
   spec.add_development_dependency "rake", "~> 10.0"
 end

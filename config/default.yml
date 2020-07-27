@@ -3,7 +3,7 @@ AllCops:
   CacheRootDirectory: '.git'
   Exclude:
     - coverage/**/*
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.4
 
 
 ### Lint
@@ -11,12 +11,6 @@ AllCops:
 Lint/NestedMethodDefinition:
   Exclude:
     - api/sinatra/**/*
-
-Lint/RaiseException:
-  Enabled: true
-
-Lint/StructNewOverride:
-  Enabled: true
 
 ### Metrics
 
@@ -44,13 +38,6 @@ Metrics/ClassLength:
 Metrics/CyclomaticComplexity:
   Severity: refactor
 
-Metrics/LineLength:
-  Max: 119
-  Exclude:
-    - Guardfile
-    - Gemfile
-  IgnoreCopDirectives: true
-
 Layout/LineLength:
   Max: 119
   Exclude:
@@ -59,7 +46,6 @@ Layout/LineLength:
   IgnoreCopDirectives: true
 
 Metrics/MethodLength:
-  Enabled: true
   CountComments: false # count full line comments?
   Max: 10
   Severity: refactor
@@ -75,10 +61,6 @@ Metrics/ModuleLength:
 ### Style / Layout
 
 #### Hash
-Style/AlignHash:
-  EnforcedColonStyle: table
-  EnforcedHashRocketStyle: table
-
 Layout/HashAlignment:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
@@ -86,19 +68,11 @@ Layout/HashAlignment:
 Style/HashSyntax:
   EnforcedStyle: ruby19_no_mixed_keys
 
-Style/HashEachMethods:
-  Enabled: true
-
 Style/HashTransformKeys:
   Enabled: false
 
 Style/HashTransformValues:
   Enabled: false
-
-#### MultilineOperation
-Style/MultilineOperationIndentation:
-  Description: Checks indentation of binary operations that span more than one line.
-  EnforcedStyle: indented
 
 Layout/MultilineOperationIndentation:
   Description: Checks indentation of binary operations that span more than one line.
@@ -112,6 +86,8 @@ Style/DoubleNegation:
   Enabled: false
 
 Style/ExponentialNotation:
+  # https://docs.rubocop.org/rubocop/cops_style.html#styleexponentialnotation
+  Enabled: true
   EnforcedStyle: engineering
 
 Style/NumericLiterals:
@@ -130,9 +106,6 @@ Style/RegexpLiteral:
 
 Style/SignalException:
   EnforcedStyle: only_raise
-
-Layout/SpaceAroundMethodCallOperator:
-  Enabled: true
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
@@ -167,3 +140,45 @@ RSpec/NamedSubject:
 
 RSpec/NestedGroups:
   Enabled: false
+
+## new between 0.79 and 0.88
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+Lint/DuplicateElsifCondition:
+  Enabled: true
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/AccessorGrouping:
+  Enabled: true
+Style/ArrayCoercion:
+  Enabled: true
+Style/BisectedAttrAccessor:
+  Enabled: true
+Style/CaseLikeIf:
+  Enabled: true
+Style/HashAsLastArrayItem:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashLikeCase:
+  Enabled: true
+Style/RedundantAssignment:
+  Enabled: true
+Style/RedundantFetchBlock:
+  Enabled: true
+Style/RedundantFileExtensionInRequire:
+  Enabled: true
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+Style/RedundantRegexpEscape:
+  Enabled: true
+Style/SlicingWithRange:
+  Enabled: true
