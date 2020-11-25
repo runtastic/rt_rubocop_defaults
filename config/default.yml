@@ -4,7 +4,8 @@ AllCops:
   Exclude:
     - coverage/**/*
   TargetRubyVersion: 2.5
-
+  # HINT: New cops are enabled by default and have to be disabled if they do not fit the projects needs
+  NewCops: enable
 
 ### Lint
 
@@ -12,20 +13,6 @@ Lint/NestedMethodDefinition:
   Exclude:
     - api/sinatra/**/*
 
-Lint/DuplicateRegexpCharacterClassElement:
-  Enabled: true
-
-Lint/EmptyBlock:
-  Enabled: true
-
-Lint/NoReturnInBeginEndBlocks:
-  Enabled: true
-
-Lint/ToEnumArguments:
-  Enabled: true
-
-Lint/UnmodifiedReduceAccumulator:
-  Enabled: true
 
 ### Metrics
 
@@ -73,6 +60,7 @@ Metrics/ModuleLength:
     - 'app/api/routes.rb'
     - 'spec/requests/**/*'
 
+
 ### Style / Layout
 
 #### Hash
@@ -94,28 +82,15 @@ Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
 #### Rest
-Style/ArgumentsForwarding:
-  Enabled: true
-
-Style/CollectionCompact:
-  Enabled: true
-
 Style/Documentation:
   Enabled: false
-
-Style/DocumentDynamicEvalDefinition:
-  Enabled: true
 
 Style/DoubleNegation:
   Enabled: false
 
 Style/ExponentialNotation:
   # https://docs.rubocop.org/rubocop/cops_style.html#styleexponentialnotation
-  Enabled: true
   EnforcedStyle: engineering
-
-Style/NegatedIfElseCondition:
-  Enabled: true
 
 Style/NumericLiterals:
   Description: Add underscores to large numeric literals to improve their readability.
@@ -137,11 +112,9 @@ Style/SignalException:
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
-Style/SwapValues:
-  Enabled: true
-
 Style/OptionalBooleanParameter:
   Enabled: false
+
 
 ### RSpec
 
