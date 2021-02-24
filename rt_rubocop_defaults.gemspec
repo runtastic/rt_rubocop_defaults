@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = "rubocop defaults used at runtastic"
   spec.license       = "MIT"
   spec.homepage      = "https://github.com/runtastic/rt_rubocop_defaults"
-  spec.required_ruby_version = "~> 2.5"
+  spec.required_ruby_version = ">= 2.5"
 
   spec.files = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
