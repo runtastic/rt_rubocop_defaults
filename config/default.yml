@@ -131,6 +131,9 @@ RSpec/ExampleWording:
   CustomTransform:
     have: has
 
+RSpec/FactoryBot/SyntaxMethods:
+  Enabled: false
+
 RSpec/FilePath:
   Exclude:
     - spec/**/*
