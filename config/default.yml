@@ -152,3 +152,7 @@ RSpec/NestedGroups:
 
 RSpec/MultipleMemoizedHelpers:
   Enabled: false
+
+RSpec/NoExpectationExample:
+  AllowedPatterns:
+    - 'verify'
