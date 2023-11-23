@@ -7,8 +7,10 @@ AllCops:
   # HINT: New cops are enabled by default and have to be disabled if they do not fit the projects needs
   NewCops: enable
 
+
 ### Lint
 
+# https://docs.rubocop.org/rubocop/cops_lint.html#lintnestedmethoddefinition
 Lint/NestedMethodDefinition:
   Exclude:
     - api/sinatra/**/*
@@ -16,6 +18,7 @@ Lint/NestedMethodDefinition:
 
 ### Metrics
 
+# https://docs.rubocop.org/rubocop/cops_metrics.html#metricsabcsize
 Metrics/AbcSize:
   Max: 18
   Severity: refactor
@@ -23,6 +26,7 @@ Metrics/AbcSize:
     - 'api/sinatra/**/*'
     - 'app/api/routes.rb'
 
+# https://docs.rubocop.org/rubocop/cops_metrics.html#metricsblocklength
 Metrics/BlockLength:
   Exclude:
     - '*.gemspec'
@@ -33,20 +37,16 @@ Metrics/BlockLength:
     - 'config/initializers/**/*'
     - 'spec/**/*'
 
+# https://docs.rubocop.org/rubocop/cops_metrics.html#metricsclasslength
 Metrics/ClassLength:
   Exclude:
     - spec/**/*
 
+# https://docs.rubocop.org/rubocop/cops_metrics.html#metricscyclomaticcomplexity
 Metrics/CyclomaticComplexity:
   Severity: refactor
 
-Layout/LineLength:
-  Max: 119
-  Exclude:
-    - Guardfile
-    - Gemfile
-  IgnoreCopDirectives: true
-
+# https://docs.rubocop.org/rubocop/cops_metrics.html#metricsmethodlength
 Metrics/MethodLength:
   CountComments: false # count full line comments?
   Max: 10
@@ -55,6 +55,7 @@ Metrics/MethodLength:
     - 'api/sinatra/**/*'
     - 'app/api/routes.rb'
 
+# https://docs.rubocop.org/rubocop/cops_metrics.html#metricsmodulelength
 Metrics/ModuleLength:
   Exclude:
     - 'app/api/routes.rb'
@@ -63,96 +64,133 @@ Metrics/ModuleLength:
 
 ### Style / Layout
 
-#### Hash
-Layout/HashAlignment:
-  EnforcedColonStyle: table
-  EnforcedHashRocketStyle: table
+# https://docs.rubocop.org/rubocop/cops_layout.html#layoutlinelength
+Layout/LineLength:
+  Max: 119
+  Exclude:
+    - Guardfile
+    - Gemfile
+  IgnoreCopDirectives: true
 
-Style/HashSyntax:
-  EnforcedStyle: ruby19_no_mixed_keys
-
-Style/HashTransformKeys:
-  Enabled: false
-
-Style/HashTransformValues:
-  Enabled: false
-
+# https://docs.rubocop.org/rubocop/cops_layout.html#layoutmultilineoperationindentation
 Layout/MultilineOperationIndentation:
   Description: Checks indentation of binary operations that span more than one line.
   EnforcedStyle: indented
 
+#### Hash
+# https://docs.rubocop.org/rubocop/cops_layout.html#layouthashalignment
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+
+# https://docs.rubocop.org/rubocop/cops_style.html#stylehashsyntax
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+# https://docs.rubocop.org/rubocop/cops_style.html#stylehashtransformkeys
+Style/HashTransformKeys:
+  Enabled: false
+
+# https://docs.rubocop.org/rubocop/cops_style.html#stylehashtransformvalues
+Style/HashTransformValues:
+  Enabled: false
+
 #### Rest
+# https://docs.rubocop.org/rubocop/cops_style.html#styledocumentation
 Style/Documentation:
   Enabled: false
 
+# https://docs.rubocop.org/rubocop/cops_style.html#styledoublenegation
 Style/DoubleNegation:
   Enabled: false
 
+# https://docs.rubocop.org/rubocop/cops_style.html#styleexponentialnotation
 Style/ExponentialNotation:
-  # https://docs.rubocop.org/rubocop/cops_style.html#styleexponentialnotation
   EnforcedStyle: engineering
 
+# https://docs.rubocop.org/rubocop/cops_style.html#stylenumericliterals
 Style/NumericLiterals:
   Description: Add underscores to large numeric literals to improve their readability.
   StyleGuide: https://github.com/bbatsov/ruby-style-guide#underscores-in-numerics
   Enabled: false
 
+# https://docs.rubocop.org/rubocop/cops_style.html#styleperlbackrefs
 Style/PerlBackrefs:
   Enabled: false
 
+# https://docs.rubocop.org/rubocop/cops_style.html#styleraiseargs
 Style/RaiseArgs:
   EnforcedStyle: compact
 
+# https://docs.rubocop.org/rubocop/cops_style.html#styleregexpliteral
 Style/RegexpLiteral:
   Enabled: false
 
+# https://docs.rubocop.org/rubocop/cops_style.html#stylesignalexception
 Style/SignalException:
   EnforcedStyle: only_raise
 
+# https://docs.rubocop.org/rubocop/cops_style.html#stylestringliterals
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
+# https://docs.rubocop.org/rubocop/cops_style.html#styleoptionalbooleanparameter
 Style/OptionalBooleanParameter:
   Enabled: false
 
-
 ### RSpec
 
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecdescribeclass
 RSpec/DescribeClass:
   Exclude:
     - spec/integration/**/*
 
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecexamplelength
 RSpec/ExampleLength:
   Enabled: false
 
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecexamplewording
 RSpec/ExampleWording:
   IgnoredWords:
     - only
   CustomTransform:
     have: has
 
-RSpec/FactoryBot/SyntaxMethods:
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecspecfilepathformat
+RSpec/SpecFilePathFormat:
   Enabled: false
 
-RSpec/FilePath:
-  Exclude:
-    - spec/**/*
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecspecfilepathsuffix
+RSpec/SpecFilePathSuffix:
+  Enabled: true
 
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecmessageexpectation
 RSpec/MessageExpectation:
   Enabled: false
 
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecmultipleexpectations
 RSpec/MultipleExpectations:
   Enabled: false
 
-RSpec/NamedSubject:
-  Enabled: false
-
-RSpec/NestedGroups:
-  Enabled: false
-
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecmultiplememoizedhelpers
 RSpec/MultipleMemoizedHelpers:
   Enabled: false
 
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecnamedsubject
+RSpec/NamedSubject:
+  EnforcedStyle: named_only
+
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecnestedgroups
+RSpec/NestedGroups:
+  Enabled: false
+
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecnoexpectationexample
 RSpec/NoExpectationExample:
   AllowedPatterns:
     - 'verify'
+
+#### FactoryBot
+
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec_factorybot.html#rspecfactorybotsyntaxmethods
+RSpec/FactoryBot/SyntaxMethods:
+  Enabled: false
