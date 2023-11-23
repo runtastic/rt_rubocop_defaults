@@ -156,6 +156,10 @@ RSpec/ExampleWording:
   CustomTransform:
     have: has
 
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecfilepath
+RSpec/FilePath:
+  Enabled: false # It's deprecated anyway
+
 # https://docs.rubocop.org/rubocop-rspec/cops_rspec.html#rspecspecfilepathformat
 RSpec/SpecFilePathFormat:
   Enabled: false
