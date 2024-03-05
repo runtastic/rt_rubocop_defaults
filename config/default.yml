@@ -198,3 +198,8 @@ RSpec/NoExpectationExample:
 # https://docs.rubocop.org/rubocop-rspec/cops_rspec_factorybot.html#rspecfactorybotsyntaxmethods
 RSpec/FactoryBot/SyntaxMethods:
   Enabled: false
+
+#### RSpec/
+# https://docs.rubocop.org/rubocop-rspec/cops_rspec_rails.html#rspecrailshavehttpstatus
+RSpec/Rails/HaveHttpStatus:
+  Enabled: false
