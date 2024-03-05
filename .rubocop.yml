@@ -1,1 +1,7 @@
-require: rt_rubocop_defaults
+require:
+  - rubocop-rake
+
+  - rt_rubocop_defaults
+
+AllCops:
+  TargetRubyVersion: 3.0
