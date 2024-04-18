@@ -199,7 +199,12 @@ RSpec/NoExpectationExample:
 RSpec/FactoryBot/SyntaxMethods:
   Enabled: false
 
-#### RSpec/
+#### Rails/
 # https://docs.rubocop.org/rubocop-rspec/cops_rspec_rails.html#rspecrailshavehttpstatus
+# Old cop name
 RSpec/Rails/HaveHttpStatus:
+  Enabled: false
+
+# New cop name
+RSpecRails/HaveHttpStatus:
   Enabled: false
