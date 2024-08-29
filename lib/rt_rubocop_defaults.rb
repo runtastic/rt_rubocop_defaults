@@ -4,3 +4,5 @@ require "rt_rubocop_defaults/version"
 require "rt_rubocop_defaults/inject"
 
 RTRuboCopDefaults::Inject.defaults!
+
+require "rubocop/cop/rspec/unexpected_requires"

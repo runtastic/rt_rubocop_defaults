@@ -208,3 +208,8 @@ RSpec/Rails/HaveHttpStatus:
 # New cop name
 RSpecRails/HaveHttpStatus:
   Enabled: false
+
+RSpec/UnexpectedRequires:
+  Description: Check that rspec files do not contain requires.
+  Enabled: true
+  VersionAdded: "2.8.0"
