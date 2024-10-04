@@ -25,4 +25,6 @@ Gem::Specification.new do |spec|
   spec.metadata["rubygems_mfa_required"] = "true"
 
   spec.add_dependency "rubocop", "~> 1.61"
+  # HINT: Needed as long as the `RSpec::UnexpectedRequires` cop is part of this repo
+  spec.add_dependency "rubocop-rspec", "~> 3.1"
 end
